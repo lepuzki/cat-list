@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const { Kitten } = require("./schema");
 
-
 async function getAllKitties(params) {
     const allKitties = await Kitten.find();
     return allKitties.map((k) => {
@@ -13,7 +12,7 @@ async function getAllKitties(params) {
     });
 }
 
-/ SAVE /
+/* SAVE */
 async function saveKitty(kitten) {
     console.log("saving", JSON.stringify(kitten));
     const birthday = new Date().getTime();
